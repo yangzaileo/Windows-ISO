@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Iso</title>
+    <style>
+        * {
+            font-weight: 100;
+            font-family: 微软雅黑, sans-serif;
+        }
+        body {
+            margin: 0;
+        }
+        .header {
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+        }
+        .header h1 {
+            display: inline;
+            margin-right: 10px;
+        }
+        .header a {
+            color: #007BFF;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            color: #000000;
+            width: 200px;
+            padding: 10px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar li {
+            padding: 10px;
+            margin-bottom: 5px;
+            user-select: none;
+        }
+        .content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .li {
+            text-align: center;
+            margin-top: 10px;
+            cursor: pointer;
+            user-select: none;
+        }
+        h2 {
+            text-align: center;
+            user-select: none;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #000000;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>下载 Windows 映像</h1>
+        <span></span>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li>可复制BT或ed2k:</li>
+                <li>Windows Server</li>
+                <li>Windows 11</li>
+                <li>Windows 10</li>
+                <li>Windows 8.1</li>
+                <li>Windows 8</li>
+                <li>Windows 7</li>
+                <li>Windows XP</li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="message" id="message"></div>
+            <h2 class="t1">Windows Server</h2>
+            <div class="ul">
+                <div onclick="copyText('ws2025')" class="li">Windows Server 2025 (点击复制BT磁力链)</div>
+                <div onclick="copyText('ws2022')" class="li">Windows Server 2022 (点击复制BT磁力链)</div>
+                <div onclick="copyText('ws2019')" class="li">Windows Server 2019 (点击复制ed2k)</div>
+            </div>
+            <h2 class="t2">Windows 11</h2>
+            <div class="ul">
+                <div onclick="copyText('w1124')" class="li">Windows11 24H2 (点击复制BT磁力链)</div>
+                <div onclick="copyText('w1123')" class="li">Windows11 23H2 (点击复制BT磁力链)</div>
+            </div>
+            <h2 class="t3">Windows 10</h2>
+            <div class="ul">
+                <div onclick="copyText('w1022')" class="li">Windows 10 22H2 (点击复制BT磁力链)</div>
+            </div>
+            <h2 class="t4">Windows 8.1</h2>
+            <div class="ul">
+                <div onclick="copyText('w81')" class="li">Windows 8.1 (点击复制ed2k)</div>
+            </div>
+            <h2 class="t5">Windows 8</h2>
+            <div class="ul">
+                <div onclick="copyText('w8')" class="li">Windows 8 (点击复制ed2k)</div>
+            </div>
+            <h2 class="t6">Windows 7</h2>
+            <div class="ul">
+                <div onclick="copyText('w7')" class="li">Windows 7 (点击复制BT磁力链)</div>
+            </div>
+            <h2 class="t7">Windows XP</h2>
+            <div class="ul">
+                <div onclick="copyText('wxp')" class="li">Windows XP (点击复制ed2k)</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function copyText(version) {
+            const magnetLinks = {
+                ws2025: "magnet:?xt=urn:btih:376b9a7cf1e77823563491794c697640a27612d3&dn=zh-cn_windows_server_2025_updated_march_2025_x64_dvd_e24d2ee5.iso&xl=8022067200",
+                ws2022: "magnet:?xt=urn:btih:0A63B2E08D5D154A79D408040BE4994917C223D3&dn=zh-cn_windows_server_2022_x64_dvd_6c73507d.iso",
+                ws2019: "ed2k://|file|cn_windows_server_2019_essentials_x64_dvd_5b386b0b.iso|4836911104|CBA4E3F0C66107AD6B64E4DA077D004F|/",
+                w1124: "magnet:?xt=urn:btih:809f50f36ff244d6b5fb979c10f3e2c96e8f1837&dn=zh-cn_windows_11_business_editions_version_24h2_updated_march_2025_x64_dvd_55fb1ffa.iso&xl=6868828160",
+                w1123: "magnet:?xt=urn:btih:566a91613cfe1c91c8928654ccf6df9f6592c590&dn=zh-cn_windows_11_business_editions_version_23h2_updated_sep_2024_x64_dvd_22316bf2.iso&xl=7094269952",
+                w1022: "magnet:?xt=urn:btih:8c4db6dd7ef32332c1720095abd7dde3c84ea6cf&dn=zh-cn_windows_10_business_editions_version_22h2_updated_march_2025_x64_dvd_853aeb12.iso&xl=7006351360",
+                w81: "ed2k://|file|cn_windows_8.1_enterprise_with_update_x64_dvd_6050374.iso|4317065216|AC8215A13817CC0EC4EA42E5C92E88B7|/",
+                w8: "ed2k://|file|cn_windows_8_x64_dvd_915407.iso|3652950016|5C7F8C212BD3A1827866563773A431C2|/",
+                w7: "magnet:?xt=urn:btih:E86414F638E11104248108B155BE9408A8362509&dn=cn_windows_7_ultimate_with_sp1_x64_dvd_u_677408.iso&xl=3420557312",
+                wxp: "ed2k://|file|zh-hans_windows_xp_professional_with_service_pack_3_x86_cd_x14-80404.iso|630239232|CD0900AFA058ACB6345761969CBCBFF4|/"
+            };
+
+            const magnetLink = magnetLinks[version];
+            if (magnetLink) {
+                navigator.clipboard.writeText(magnetLink).then(() => {
+                    document.getElementById('message').textContent = 'BT(或ed2k)已复制';
+                    setTimeout(() => {
+                        document.getElementById('message').textContent = '';
+                    }, 3000);
+                }).catch(err => {
+                    console.error('复制失败:', err);
+                    document.getElementById('message').textContent = '复制失败';
+                });
+            } else {
+                document.getElementById('message').textContent = '未找到对应的BT(或ed2k)';
+            }
+        }
+    </script>
+</body>
+</html>
